@@ -8,4 +8,5 @@ On client, it uses lua and invokes APIs provided by the game company to transmit
 So if you do not have a hardware flight instrument, you can still use this small tool to show some basic flight information.
 
 This picture is a screen capture for the application:
+
 ![](https://github.com/hongweibai/LOFC2FlightPanel/blob/master/image/demo_init.jpg)
