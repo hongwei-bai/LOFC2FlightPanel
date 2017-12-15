@@ -45,7 +45,6 @@ public class SocketServerHelper {
                 try {
                     BufferedReader input = new BufferedReader(new InputStreamReader(clntSock.getInputStream()));
                     boolean flag = true;
-                    int count = 1;
                     while (flag) {
                         String line = input.readLine();
 

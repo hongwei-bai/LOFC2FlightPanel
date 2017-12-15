@@ -1,22 +1,14 @@
 package ui.FlightPanel.Flight;
 
-import java.awt.Color;
-import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Paint;
-import java.awt.Toolkit;
 
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 import Llfc2Constant.LOFC2Constant;
-import utils.Log;
 
 public class FlightAttitude extends JPanel {
-    private final String TAG = "FlightAttitude";
-    private final Color INACTIVE_COLOR = Color.lightGray;
-    private final Color ACTIVE_COLOR = Color.green;
+    private static final long serialVersionUID = 6809240470029143591L;
     private boolean mbGearDown = false;
     private boolean mbFlapOn = false;
     private boolean mbAirbrakeOn = false;

@@ -1,6 +1,5 @@
 package utils;
 
-import java.io.PrintStream;
 import java.text.SimpleDateFormat;
 
 public class Log {

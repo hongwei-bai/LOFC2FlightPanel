@@ -1,7 +1,5 @@
 package model.infoparser;
 
-import java.util.HashMap;
-
 import Llfc2Constant.LOFC2Constant;
 
 public class FlightInfoParser extends InfoParser {

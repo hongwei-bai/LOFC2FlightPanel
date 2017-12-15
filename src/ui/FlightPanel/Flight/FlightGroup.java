@@ -1,13 +1,12 @@
 package ui.FlightPanel.Flight;
 
-import java.awt.GridLayout;
-
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 
 import utils.Log;
 
 public class FlightGroup extends JPanel {
+    private static final long serialVersionUID = 5463832125340522931L;
     private FlightAttitude mFlightAttitude = new FlightAttitude();
     private FlightInfoPanel mFlightInfoPanel = new FlightInfoPanel();
 

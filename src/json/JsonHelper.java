@@ -9,12 +9,12 @@ import org.json.JSONObject;
 
 public class JsonHelper {
 
-    public static Map toMap(String jsonString) throws JSONException {
+    public static Map<String, String> toMap(String jsonString) throws JSONException {
 
         JSONObject jsonObject = new JSONObject(jsonString);
 
-        Map result = new HashMap();
-        Iterator iterator = jsonObject.keys();
+        Map<String, String> result = new HashMap<String, String>();
+        Iterator<?> iterator = jsonObject.keys();
         String key = null;
         String value = null;
 

@@ -32,7 +32,7 @@ public class Dispatcher implements Runnable {
         }
     }
 
-    public static SocketServerHelper getSocketServerHelper() {
+    public SocketServerHelper getSocketServerHelper() {
         return mSocketServerHelper;
     }
 }

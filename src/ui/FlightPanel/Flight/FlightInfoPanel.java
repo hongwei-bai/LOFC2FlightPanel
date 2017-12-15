@@ -1,17 +1,15 @@
 package ui.FlightPanel.Flight;
 
-import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.RowFilter;
 
+import Llfc2Constant.DisplayString;
 import Llfc2Constant.LOFC2Constant;
-import utils.Log;
 
 public class FlightInfoPanel extends JPanel {
+    private static final long serialVersionUID = 2197146502505417104L;
     private final JLabel mAltitudeAboveSeaLevel = new JLabel();
     private final JLabel mTrueAirSpeed = new JLabel();
     private final JLabel mEngineLeft = new JLabel();
@@ -28,12 +26,12 @@ public class FlightInfoPanel extends JPanel {
 
     public FlightInfoPanel() {
         setLayout(new GridLayout(3, 2));
-        mAltitudeAboveSeaLevel.setText("Altitude:");
-        mTrueAirSpeed.setText("Air speed:");
-        mEngineLeft.setText("L Engine: 0");
-        mEngineRight.setText("R Engine: 0");
-        mVerticalSpeed.setText("Vertical speed:");
-        mPitch.setText("Pitch: 0");
+        mAltitudeAboveSeaLevel.setText(DisplayString.ALTITUDE_SEA_LEVEL);
+        mTrueAirSpeed.setText(DisplayString.AIR_SPEED);
+        mEngineLeft.setText(DisplayString.LEFT_ENGINE + "0");
+        mEngineRight.setText(DisplayString.RIGHT_ENGINE + "0");
+        mVerticalSpeed.setText(DisplayString.VERTICAL_SPEED);
+        mPitch.setText(DisplayString.PITCH + "0");
         // row 1
         add(mAltitudeAboveSeaLevel);
         add(mTrueAirSpeed);
@@ -52,11 +50,11 @@ public class FlightInfoPanel extends JPanel {
             mPreviousAirSPeed = speed.intValue();
             switch (country) {
             case LOFC2Constant.OBJ_COUNTRY.USA:
-                mTrueAirSpeed.setText("Air speed: " + (int) (speed * 1.9438) + " n");
+                mTrueAirSpeed.setText(DisplayString.AIR_SPEED + (int) (speed * 1.9438) + " n");
                 return;
             case LOFC2Constant.OBJ_COUNTRY.RUS:
             default:
-                mTrueAirSpeed.setText("Air speed: " + (int) (speed * 3.6) + " Km/h");
+                mTrueAirSpeed.setText(DisplayString.AIR_SPEED + (int) (speed * 3.6) + " Km/h");
                 return;
             }
         }
@@ -67,11 +65,11 @@ public class FlightInfoPanel extends JPanel {
             mPreviousAltitudeAboveSeaLevel = altSea.intValue();
             switch (country) {
             case LOFC2Constant.OBJ_COUNTRY.USA:
-                mAltitudeAboveSeaLevel.setText("Altitude: " + (int) (altSea * 3.2808399) + " inch");
+                mAltitudeAboveSeaLevel.setText(DisplayString.ALTITUDE_SEA_LEVEL + (int) (altSea * 3.2808399) + " inch");
                 return;
             case LOFC2Constant.OBJ_COUNTRY.RUS:
             default:
-                mAltitudeAboveSeaLevel.setText("Altitude: " + altSea.intValue() + " m");
+                mAltitudeAboveSeaLevel.setText(DisplayString.ALTITUDE_SEA_LEVEL + altSea.intValue() + " m");
                 return;
             }
         }
@@ -80,28 +78,28 @@ public class FlightInfoPanel extends JPanel {
     public void setEngineInfoRPMLeft(int rpm) {
         if (Math.abs(rpm - mPreviousEngineLeft) >= 1) {
             mPreviousEngineLeft = rpm;
-            mEngineLeft.setText("L Engine: " + rpm + "%");
+            mEngineLeft.setText(DisplayString.LEFT_ENGINE + rpm + "%");
         }
     }
 
     public void setEngineInfoRPMRight(int rpm) {
         if (Math.abs(rpm - mPreviousEngineRight) >= 1) {
             mPreviousEngineRight = rpm;
-            mEngineRight.setText("R Engine: " + rpm + "%");
+            mEngineRight.setText(DisplayString.RIGHT_ENGINE + rpm + "%");
         }
     }
 
     public void setVerticalSpeed(Double vs) {
         if (Math.abs(vs - mPreviousVerticalSpeed) >= 1) {
             mPreviousVerticalSpeed = vs.intValue();
-            mVerticalSpeed.setText("Vertical speed: " + vs.intValue() + " m/s");
+            mVerticalSpeed.setText(DisplayString.VERTICAL_SPEED + vs.intValue() + " m/s");
         }
     }
 
     public void setPitch(Double pitch) {
         if (Math.abs(pitch - mPreviousPitch) >= 1) {
             mPreviousPitch = pitch.intValue();
-            mPitch.setText("Pitch: " + pitch.intValue() + " rad");
+            mPitch.setText(DisplayString.PITCH + pitch.intValue() + " rad");
         }
     }
 }

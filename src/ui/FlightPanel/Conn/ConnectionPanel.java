@@ -1,14 +1,11 @@
 package ui.FlightPanel.Conn;
 
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.FlowLayout;
-
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class ConnectionPanel extends JPanel {
+    private static final long serialVersionUID = -1971522834860745333L;
     private final JLabel mConnStatus = new JLabel();
 
     public ConnectionPanel() {
