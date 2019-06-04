@@ -8,3 +8,16 @@ So if you do not have a hardware flight instrument, you can still use this small
 This picture is a screen capture for the application:
 
 ![](https://github.com/hongweibai/LOFC2FlightPanel/blob/master/image/demo_init.jpg)
+
+
+
+Other than that, please replace two config files in game directory:
+
+\<Game>\Config\Export\Export.lua
+
+\<Game>\Config\Export\Config.lua
+
+Please find these two files in 
+
+<https://github.com/MikeHongweiBai/LOFC2FlightPanel/tree/master/game_config_export>
+
